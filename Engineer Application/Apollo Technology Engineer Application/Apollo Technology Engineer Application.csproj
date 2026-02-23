@@ -7,10 +7,39 @@
 		<Nullable>enable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<PackageIcon>icon.png</PackageIcon>
+		<ApplicationIcon>assets\apollo-icon.ico</ApplicationIcon>
+		<Company>$(Authors</Company>
+		<Copyright>2026 Apollo Technology</Copyright>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>none</DebugType>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2903.40" />
+	  <Content Include="assets\apollo-icon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3800.47" />
+
+		<PackageReference Include="System.Security.Cryptography.ProtectedData" Version="10.0.3" />
+
+		<PackageReference Include="MailKit" Version="4.15.0" />
+		<PackageReference Include="MimeKit" Version="4.15.0" />
+		<PackageReference Include="Google.Apis.Auth" Version="1.73.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="assets\icon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
